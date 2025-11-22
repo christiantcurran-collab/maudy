@@ -5,13 +5,13 @@
 }
 
 :root {
-    --primary-color: #6B4D8A;
-    --primary-dark: #543D6F;
+    --primary-color: #5A4270;
+    --primary-dark: #4A3460;
     --primary-light: #8F6FB8;
     --accent-color: #FFB6C1;
     --accent-dark: #FFA0AD;
     --success-color: #8F6FB8;
-    --success-dark: #6B4D8A;
+    --success-dark: #5A4270;
     --danger-color: #dc3545;
     --text-dark: #333333;
     --text-medium: #666666;
@@ -62,26 +62,26 @@ body {
 }
 
 .logo-image {
-    height: 50px;
+    height: 45px;
     width: auto;
 }
 
 .logo-text-container {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
 }
 
 .logo-text {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: #F5F0FF;
     line-height: 1;
+    text-transform: lowercase;
 }
 
 .logo-tagline {
-    font-size: 0.7rem;
-    color: var(--text-medium);
-    font-weight: normal;
-    line-height: 1.2;
+    display: none;
 }
 
 /* Mobile Menu Toggle */
