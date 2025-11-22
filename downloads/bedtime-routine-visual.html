@@ -9,6 +9,7 @@
             body { margin: 0; padding: 20px; }
             .no-print { display: none; }
             @page { size: A4; margin: 15mm; }
+            .step-content { border: 1px solid #ddd !important; }
         }
         body {
             font-family: Arial, sans-serif;
@@ -26,6 +27,7 @@
             border-radius: 5px;
             cursor: pointer;
             margin-bottom: 20px;
+            margin-right: 10px;
         }
         h1 {
             color: #573776;
@@ -62,8 +64,17 @@
         }
         .step-content {
             flex: 1;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 500;
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            min-height: 40px;
+        }
+        .step-content:focus {
+            outline: 2px solid #573776;
+            border-color: #573776;
+            border-style: solid;
         }
         .checkbox {
             width: 50px;
@@ -85,70 +96,70 @@
     <button class="print-btn no-print" onclick="window.print()">🖨️ Print to PDF</button>
     
     <h1>🌙 My Bedtime Routine</h1>
-    <p style="text-align: center; font-size: 20px; color: #666;">Time to get ready for a good night's sleep!</p>
+    <p class="no-print" style="text-align: center; font-size: 20px; color: #666;">Time to get ready for a good night's sleep!</p>
     
     <div class="instructions no-print">
         <h3>How to Use:</h3>
         <ul>
+            <li>Click on any step to edit it before printing</li>
             <li>Start routine at the same time each night</li>
             <li>Check off each step as you complete it</li>
             <li>Keep the routine calm and predictable</li>
-            <li>Adjust timing to fit your family's schedule</li>
         </ul>
     </div>
     
     <div class="routine-box">
         <div class="step">
             <div class="step-icon">🛁</div>
-            <div class="step-content">Take a bath or shower</div>
+            <input type="text" class="step-content" value="Take a bath or shower">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-icon">👕</div>
-            <div class="step-content">Put on pajamas</div>
+            <input type="text" class="step-content" value="Put on pajamas">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-icon">🪥</div>
-            <div class="step-content">Brush teeth</div>
+            <input type="text" class="step-content" value="Brush teeth">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-icon">🚽</div>
-            <div class="step-content">Use the bathroom</div>
+            <input type="text" class="step-content" value="Use the bathroom">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-icon">📚</div>
-            <div class="step-content">Read a bedtime story</div>
+            <input type="text" class="step-content" value="Read a bedtime story">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-icon">💧</div>
-            <div class="step-content">Get a drink of water</div>
+            <input type="text" class="step-content" value="Get a drink of water">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-icon">🧸</div>
-            <div class="step-content">Get in bed with stuffed animals</div>
+            <input type="text" class="step-content" value="Get in bed with stuffed animals">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-icon">💡</div>
-            <div class="step-content">Turn off lights / nightlight on</div>
+            <input type="text" class="step-content" value="Turn off lights / nightlight on">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-icon">💤</div>
-            <div class="step-content" style="color: #573776; font-weight: bold;">Sleep tight!</div>
+            <div class="step-content" style="color: #573776; font-weight: bold; border: none;">Sleep tight!</div>
             <div style="font-size: 40px;">⭐</div>
         </div>
     </div>

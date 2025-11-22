@@ -9,6 +9,7 @@
             body { margin: 0; padding: 20px; }
             .no-print { display: none; }
             @page { size: A4; margin: 15mm; }
+            .quiet-title, .quiet-subtitle, .rule-text { border: 1px solid #ddd !important; }
         }
         body {
             font-family: Arial, sans-serif;
@@ -43,15 +44,37 @@
             margin: 20px 0;
         }
         .quiet-title {
-            font-size: 90px;
+            font-size: 80px;
             font-weight: bold;
             color: #4169E1;
             margin: 20px 0;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .quiet-title:focus {
+            outline: 2px solid #4169E1;
+            border-color: #4169E1;
+            border-style: solid;
         }
         .quiet-subtitle {
-            font-size: 36px;
+            font-size: 32px;
             color: #666;
             margin: 20px 0;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .quiet-subtitle:focus {
+            outline: 2px solid #4169E1;
+            border-color: #4169E1;
+            border-style: solid;
         }
         .rules-box {
             background: white;
@@ -62,7 +85,7 @@
             text-align: left;
         }
         .rule {
-            font-size: 22px;
+            font-size: 20px;
             margin: 15px 0;
             display: flex;
             align-items: center;
@@ -71,6 +94,18 @@
         .rule-icon {
             font-size: 30px;
             flex-shrink: 0;
+        }
+        .rule-text {
+            flex: 1;
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            padding: 8px;
+            font-size: 20px;
+        }
+        .rule-text:focus {
+            outline: 2px solid #4169E1;
+            border-color: #4169E1;
+            border-style: solid;
         }
         .instructions {
             background: #f8f9fa;
@@ -88,50 +123,50 @@
     <div class="instructions no-print">
         <h3>How to Use:</h3>
         <ul>
+            <li>Click on any text to edit it before printing</li>
             <li>Print and post in designated calm-down space</li>
             <li>Create a cozy area with soft seating, dim lighting</li>
             <li>Include sensory tools (fidgets, weighted lap pad)</li>
-            <li>Keep space free from stimulation</li>
             <li>Respect when someone is in the quiet zone</li>
         </ul>
     </div>
     
     <div class="quiet-sign">
         <div class="quiet-icon">🤫</div>
-        <div class="quiet-title">QUIET ZONE</div>
-        <div class="quiet-subtitle">A Safe Space to Calm Down</div>
+        <input type="text" class="quiet-title" value="QUIET ZONE">
+        <input type="text" class="quiet-subtitle" value="A Safe Space to Calm Down">
         
         <div class="rules-box">
             <h2 style="text-align: center; color: #4169E1; margin-bottom: 20px;">Zone Rules:</h2>
             
             <div class="rule">
                 <div class="rule-icon">🔇</div>
-                <div>Use quiet voices or no talking</div>
+                <input type="text" class="rule-text" value="Use quiet voices or no talking">
             </div>
             
             <div class="rule">
                 <div class="rule-icon">🚶</div>
-                <div>Enter slowly and gently</div>
+                <input type="text" class="rule-text" value="Enter slowly and gently">
             </div>
             
             <div class="rule">
                 <div class="rule-icon">🤲</div>
-                <div>Keep hands and feet to yourself</div>
+                <input type="text" class="rule-text" value="Keep hands and feet to yourself">
             </div>
             
             <div class="rule">
                 <div class="rule-icon">😌</div>
-                <div>Use calming strategies</div>
+                <input type="text" class="rule-text" value="Use calming strategies">
             </div>
             
             <div class="rule">
                 <div class="rule-icon">⏰</div>
-                <div>Leave when you feel calm and ready</div>
+                <input type="text" class="rule-text" value="Leave when you feel calm and ready">
             </div>
             
             <div class="rule">
                 <div class="rule-icon">🤝</div>
-                <div>Respect others who need quiet time</div>
+                <input type="text" class="rule-text" value="Respect others who need quiet time">
             </div>
         </div>
         

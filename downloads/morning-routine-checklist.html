@@ -9,6 +9,7 @@
             body { margin: 0; padding: 20px; }
             .no-print { display: none; }
             @page { size: A4; margin: 15mm; }
+            .step-content { border: 1px solid #ddd !important; }
         }
         body {
             font-family: Arial, sans-serif;
@@ -17,7 +18,7 @@
             padding: 20px;
             background: white;
         }
-        .print-btn {
+        .print-btn, .add-btn {
             background: #573776;
             color: white;
             border: none;
@@ -26,6 +27,10 @@
             border-radius: 5px;
             cursor: pointer;
             margin-bottom: 20px;
+            margin-right: 10px;
+        }
+        .add-btn {
+            background: #7A5B99;
         }
         h1 {
             color: #573776;
@@ -63,8 +68,17 @@
         }
         .step-content {
             flex: 1;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 500;
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            min-height: 40px;
+        }
+        .step-content:focus {
+            outline: 2px solid #573776;
+            border-color: #573776;
+            border-style: solid;
         }
         .checkbox {
             width: 50px;
@@ -84,81 +98,117 @@
 </head>
 <body>
     <button class="print-btn no-print" onclick="window.print()">🖨️ Print to PDF</button>
+    <button class="add-btn no-print" onclick="addStep()">➕ Add Step</button>
     
     <h1>🌅 My Morning Routine</h1>
-    <p style="text-align: center; font-size: 20px; color: #666;">Check off each step as you complete it!</p>
+    <p class="no-print" style="text-align: center; font-size: 20px; color: #666;">Check off each step as you complete it!</p>
     
     <div class="instructions no-print">
         <h3>How to Use:</h3>
         <ul>
+            <li>Click on any step to edit it before printing</li>
+            <li>Use "Add Step" button to add more steps</li>
             <li>Print and laminate this checklist</li>
             <li>Use a dry-erase marker to check off steps each morning</li>
             <li>Hang in bathroom or bedroom where easily visible</li>
-            <li>Customize steps to match your child's specific routine</li>
         </ul>
     </div>
     
-    <div class="routine-box">
+    <div class="routine-box" id="routineBox">
         <div class="step">
             <div class="step-number">1</div>
-            <div class="step-content">Wake up and get out of bed</div>
+            <input type="text" class="step-content" value="Wake up and get out of bed">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-number">2</div>
-            <div class="step-content">Use the bathroom</div>
+            <input type="text" class="step-content" value="Use the bathroom">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-number">3</div>
-            <div class="step-content">Brush teeth</div>
+            <input type="text" class="step-content" value="Brush teeth">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-number">4</div>
-            <div class="step-content">Wash face and hands</div>
+            <input type="text" class="step-content" value="Wash face and hands">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-number">5</div>
-            <div class="step-content">Get dressed</div>
+            <input type="text" class="step-content" value="Get dressed">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-number">6</div>
-            <div class="step-content">Brush or comb hair</div>
+            <input type="text" class="step-content" value="Brush or comb hair">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-number">7</div>
-            <div class="step-content">Eat breakfast</div>
+            <input type="text" class="step-content" value="Eat breakfast">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-number">8</div>
-            <div class="step-content">Put on shoes and coat</div>
+            <input type="text" class="step-content" value="Put on shoes and coat">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-number">9</div>
-            <div class="step-content">Pack backpack</div>
+            <input type="text" class="step-content" value="Pack backpack">
             <div class="checkbox"></div>
         </div>
         
         <div class="step">
             <div class="step-number">✓</div>
-            <div class="step-content" style="color: #573776; font-weight: bold;">Ready for the day!</div>
+            <div class="step-content" style="color: #573776; font-weight: bold; border: none;">Ready for the day!</div>
             <div style="font-size: 40px;">🎉</div>
         </div>
     </div>
+    
+    <script>
+        function addStep() {
+            const routineBox = document.getElementById('routineBox');
+            const steps = routineBox.querySelectorAll('.step');
+            const lastStepWithNumber = steps[steps.length - 2]; // Get second to last (before "Ready for the day!")
+            const newStepNumber = steps.length - 1; // Exclude the final celebration step
+            
+            const newStep = document.createElement('div');
+            newStep.className = 'step';
+            newStep.innerHTML = `
+                <div class="step-number">${newStepNumber}</div>
+                <input type="text" class="step-content" value="New step">
+                <div class="checkbox"></div>
+            `;
+            
+            // Insert before the final "Ready for the day!" step
+            routineBox.insertBefore(newStep, steps[steps.length - 1]);
+            
+            // Update all step numbers
+            updateStepNumbers();
+        }
+        
+        function updateStepNumbers() {
+            const routineBox = document.getElementById('routineBox');
+            const steps = routineBox.querySelectorAll('.step');
+            steps.forEach((step, index) => {
+                const numberDiv = step.querySelector('.step-number');
+                if (index < steps.length - 1) {
+                    numberDiv.textContent = index + 1;
+                }
+            });
+        }
+    </script>
     
     <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
         <p>maudy.co</p>

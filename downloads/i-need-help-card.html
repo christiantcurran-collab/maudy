@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Need Help Card - Maudy Visual Support</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 20px; }
+            .no-print { display: none; }
+            @page { size: A4; margin: 15mm; }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        .print-btn {
+            background: #573776;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #573776;
+            text-align: center;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .help-card {
+            border: 8px solid #FF6B6B;
+            border-radius: 20px;
+            padding: 50px 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #FFE5E5 0%, #FFF0F0 100%);
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .help-icon {
+            font-size: 120px;
+            margin-bottom: 20px;
+        }
+        .help-text {
+            font-size: 60px;
+            font-weight: bold;
+            color: #FF6B6B;
+            margin: 20px 0;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #573776;
+            margin: 20px 0;
+        }
+        @media print {
+            .card-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                page-break-inside: avoid;
+            }
+            .help-card {
+                page-break-inside: avoid;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print to PDF</button>
+    
+    <h1>I Need Help Card</h1>
+    
+    <div class="instructions no-print">
+        <h3>How to Use:</h3>
+        <ul>
+            <li>Print and laminate these cards</li>
+            <li>Cut out and place where child can easily access</li>
+            <li>Child can hand card to adult when verbal communication is difficult</li>
+            <li>Especially helpful during meltdowns, sensory overload, or anxiety</li>
+            <li>Teaches non-verbal communication and self-advocacy</li>
+        </ul>
+    </div>
+    
+    <div class="card-container">
+        <div class="help-card">
+            <div class="help-icon">🆘</div>
+            <div class="help-text">I NEED HELP</div>
+        </div>
+        
+        <div class="help-card">
+            <div class="help-icon">🆘</div>
+            <div class="help-text">I NEED HELP</div>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
+        <p>maudy.co</p>
+    </div>
+</body>
+</html>

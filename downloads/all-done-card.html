@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Done Card - Maudy Visual Support</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 20px; }
+            .no-print { display: none; }
+            @page { size: A4; margin: 15mm; }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        .print-btn {
+            background: #573776;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #573776;
+            text-align: center;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .done-card {
+            border: 8px solid #4CAF50;
+            border-radius: 20px;
+            padding: 50px 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #E8F5E9 0%, #F1F8F4 100%);
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .done-icon {
+            font-size: 120px;
+            margin-bottom: 20px;
+        }
+        .done-text {
+            font-size: 60px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin: 20px 0;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #573776;
+            margin: 20px 0;
+        }
+        @media print {
+            .card-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                page-break-inside: avoid;
+            }
+            .done-card {
+                page-break-inside: avoid;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print to PDF</button>
+    
+    <h1>All Done Card</h1>
+    
+    <div class="instructions no-print">
+        <h3>How to Use:</h3>
+        <ul>
+            <li>Print and laminate these cards</li>
+            <li>Cut out and place in activity areas</li>
+            <li>Child can use card to signal task completion</li>
+            <li>Provides clear communication about finishing activities</li>
+            <li>Helps with transitions between activities</li>
+        </ul>
+    </div>
+    
+    <div class="card-container">
+        <div class="done-card">
+            <div class="done-icon">✅</div>
+            <div class="done-text">ALL DONE!</div>
+        </div>
+        
+        <div class="done-card">
+            <div class="done-icon">✅</div>
+            <div class="done-text">ALL DONE!</div>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
+        <p>maudy.co</p>
+    </div>
+</body>
+</html>

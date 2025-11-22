@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Time Timer - Maudy Visual Support</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 20px; }
+            .no-print { display: none; }
+            @page { size: A4; margin: 15mm; }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        .print-btn {
+            background: #573776;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #573776;
+            text-align: center;
+        }
+        .timer-card {
+            border: 6px solid #2196F3;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+            margin: 30px 0;
+        }
+        .timer-display {
+            font-size: 100px;
+            font-weight: bold;
+            color: #2196F3;
+            margin: 30px 0;
+            font-family: 'Courier New', monospace;
+        }
+        .time-blocks {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .time-block {
+            width: 100%;
+            height: 80px;
+            border: 4px solid #2196F3;
+            border-radius: 10px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #2196F3;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #573776;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print to PDF</button>
+    
+    <h1>⏰ Screen Time Timer</h1>
+    <p class="no-print" style="text-align: center; font-size: 20px; color: #666;">Visual timer for screen time limits</p>
+    
+    <div class="instructions no-print">
+        <h3>How to Use:</h3>
+        <ul>
+            <li>Print and laminate the timer card</li>
+            <li>Fill in agreed-upon screen time duration</li>
+            <li>Cross off or cover each 5-minute block as time passes</li>
+            <li>When all blocks are covered, screen time is over</li>
+            <li>Use a physical timer alongside for audio cue</li>
+            <li>Prepare child with 5 and 2 minute warnings</li>
+        </ul>
+    </div>
+    
+    <div class="timer-card">
+        <div style="font-size: 40px; margin-bottom: 20px;">📱 💻 📺</div>
+        <h2 style="color: #2196F3; font-size: 36px;">Screen Time Allowance</h2>
+        <div class="timer-display">30:00</div>
+        <p style="font-size: 24px; color: #666; margin: 20px 0;">Cross off one block every 5 minutes</p>
+        
+        <div class="time-blocks">
+            <div class="time-block">5</div>
+            <div class="time-block">10</div>
+            <div class="time-block">15</div>
+            <div class="time-block">20</div>
+            <div class="time-block">25</div>
+            <div class="time-block">30</div>
+        </div>
+        
+        <div style="background: #FF5722; color: white; padding: 15px; border-radius: 10px; margin-top: 30px; font-size: 24px; font-weight: bold;">
+            ⏱️ When all blocks are crossed off, screen time is done!
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
+        <p>maudy.co</p>
+    </div>
+</body>
+</html>

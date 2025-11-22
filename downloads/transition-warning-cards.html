@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Warning Cards - Maudy Visual Support</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 20px; }
+            .no-print { display: none; }
+            @page { size: A4; margin: 15mm; }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        .print-btn {
+            background: #573776;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #573776;
+            text-align: center;
+        }
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .warning-card {
+            border: 8px solid #FF9800;
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-5min {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+        }
+        .card-2min {
+            background: linear-gradient(135deg, #FFE0B2 0%, #FFCC80 100%);
+            border-color: #F57C00;
+        }
+        .card-1min {
+            background: linear-gradient(135deg, #FFCC80 0%, #FFB74D 100%);
+            border-color: #E65100;
+        }
+        .card-icon {
+            font-size: 100px;
+            margin-bottom: 20px;
+        }
+        .card-text {
+            font-size: 70px;
+            font-weight: bold;
+            color: #E65100;
+            margin: 20px 0;
+        }
+        .card-message {
+            font-size: 28px;
+            color: #666;
+            margin-top: 10px;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #573776;
+            margin: 20px 0;
+        }
+        @media print {
+            .warning-card {
+                page-break-inside: avoid;
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print to PDF</button>
+    
+    <h1>⏳ Transition Warning Cards</h1>
+    <p class="no-print" style="text-align: center; font-size: 20px; color: #666;">Help prepare for upcoming changes</p>
+    
+    <div class="instructions no-print">
+        <h3>How to Use:</h3>
+        <ul>
+            <li>Print and laminate all three cards</li>
+            <li>Show cards in sequence before transitions</li>
+            <li>Start with 5-minute warning, then 2-minute, then 1-minute</li>
+            <li>Helps reduce anxiety about unexpected changes</li>
+            <li>Use with timer so child can track remaining time</li>
+            <li>Especially helpful for transitions from preferred activities</li>
+        </ul>
+    </div>
+    
+    <div class="cards-container">
+        <div class="warning-card card-5min">
+            <div class="card-icon">⏰</div>
+            <div class="card-text">5 MINUTES</div>
+            <div class="card-message">Almost time to finish!</div>
+        </div>
+        
+        <div class="warning-card card-2min">
+            <div class="card-icon">⏰</div>
+            <div class="card-text">2 MINUTES</div>
+            <div class="card-message">Start wrapping up!</div>
+        </div>
+        
+        <div class="warning-card card-1min">
+            <div class="card-icon">⏰</div>
+            <div class="card-text">1 MINUTE</div>
+            <div class="card-message">Time to stop soon!</div>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
+        <p>maudy.co</p>
+    </div>
+</body>
+</html>

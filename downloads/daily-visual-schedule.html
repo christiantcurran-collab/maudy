@@ -10,6 +10,7 @@
             .no-print { display: none; }
             @page { size: A4; margin: 15mm; }
             .activity { border: 1px solid #ddd !important; }
+            .time { border: 1px solid #ddd !important; }
         }
         body {
             font-family: Arial, sans-serif;
@@ -18,7 +19,7 @@
             padding: 20px;
             background: white;
         }
-        .print-btn {
+        .print-btn, .add-btn {
             background: #573776;
             color: white;
             border: none;
@@ -27,6 +28,10 @@
             border-radius: 5px;
             cursor: pointer;
             margin-bottom: 20px;
+            margin-right: 10px;
+        }
+        .add-btn {
+            background: #7A5B99;
         }
         h1 {
             color: #573776;
@@ -52,8 +57,18 @@
         }
         .time {
             font-weight: bold;
-            font-size: 18px;
+            font-size: 16px;
             color: #573776;
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .time:focus {
+            outline: 2px solid #573776;
+            border-color: #573776;
+            border-style: solid;
         }
         .activity {
             font-size: 18px;
@@ -85,14 +100,16 @@
 </head>
 <body>
     <button class="print-btn no-print" onclick="window.print()">🖨️ Print to PDF</button>
+    <button class="add-btn no-print" onclick="addTimeSlot()">➕ Add Time Slot</button>
     
     <h1>My Daily Schedule</h1>
-    <p style="text-align: center; color: #666; font-size: 18px;">Name: ___________________ Date: ___________________</p>
+    <p class="no-print" style="text-align: center; color: #666; font-size: 18px;">Name: ___________________ Date: ___________________</p>
     
     <div class="instructions no-print">
         <h3>How to Use:</h3>
         <ol>
-            <li>Click on any activity to edit it before printing</li>
+            <li>Click on any time or activity to edit it before printing</li>
+            <li>Use "Add Time Slot" button to add more entries</li>
             <li>Customize times and activities to match your family's routine</li>
             <li>Click "Print to PDF" when ready</li>
             <li>Review the schedule with your child at the start of the day</li>
@@ -100,73 +117,87 @@
         </ol>
     </div>
     
-    <div class="schedule">
+    <div class="schedule" id="schedule">
         <div class="time-slot">
-            <div class="time">7:00 AM</div>
+            <input type="text" class="time" value="7:00 AM">
             <input type="text" class="activity" value="Wake Up & Get Dressed">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
-            <div class="time">7:30 AM</div>
+            <input type="text" class="time" value="7:30 AM">
             <input type="text" class="activity" value="Breakfast">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
-            <div class="time">8:00 AM</div>
+            <input type="text" class="time" value="8:00 AM">
             <input type="text" class="activity" value="Morning Routine (brush teeth, backpack)">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
-            <div class="time">8:30 AM</div>
+            <input type="text" class="time" value="8:30 AM">
             <input type="text" class="activity" value="Leave for School / School Time">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
-            <div class="time">3:00 PM</div>
+            <input type="text" class="time" value="3:00 PM">
             <input type="text" class="activity" value="After School Snack & Decompress">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
-            <div class="time">4:00 PM</div>
+            <input type="text" class="time" value="4:00 PM">
             <input type="text" class="activity" value="Homework / Quiet Time">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
-            <div class="time">5:00 PM</div>
+            <input type="text" class="time" value="5:00 PM">
             <input type="text" class="activity" value="Free Play / Activities">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
-            <div class="time">6:00 PM</div>
+            <input type="text" class="time" value="6:00 PM">
             <input type="text" class="activity" value="Dinner">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
-            <div class="time">7:00 PM</div>
+            <input type="text" class="time" value="7:00 PM">
             <input type="text" class="activity" value="Bath Time / Screen Time">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
-            <div class="time">8:00 PM</div>
+            <input type="text" class="time" value="8:00 PM">
             <input type="text" class="activity" value="Bedtime Routine / Story">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
-            <div class="time">8:30 PM</div>
+            <input type="text" class="time" value="8:30 PM">
             <input type="text" class="activity" value="Lights Out / Sleep">
             <div class="checkbox"></div>
         </div>
     </div>
+    
+    <script>
+        function addTimeSlot() {
+            const schedule = document.getElementById('schedule');
+            const newSlot = document.createElement('div');
+            newSlot.className = 'time-slot';
+            newSlot.innerHTML = `
+                <input type="text" class="time" value="9:00 AM">
+                <input type="text" class="activity" value="New Activity">
+                <div class="checkbox"></div>
+            `;
+            schedule.appendChild(newSlot);
+        }
+    </script>
     
     <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
         <p>maudy.co</p>
