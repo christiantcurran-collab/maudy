@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wait Card - Maudy Visual Support</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 20px; }
+            .no-print { display: none; }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        .print-btn {
+            background: #573776;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #573776;
+            text-align: center;
+        }
+        .wait-card {
+            border: 6px solid #FFD700;
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFE6F0 100%);
+        }
+        .wait-icon {
+            font-size: 120px;
+            margin: 20px 0;
+        }
+        .wait-text {
+            font-size: 80px;
+            font-weight: bold;
+            color: #FFD700;
+            text-transform: uppercase;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .timer-box {
+            background: white;
+            border: 4px solid #FFD700;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        .timer-circles {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .circle {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #FFD700;
+            border-radius: 50%;
+            background: white;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #573776;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print to PDF</button>
+    
+    <h1>WAIT Card</h1>
+    
+    <div class="instructions no-print">
+        <h3>How to Use:</h3>
+        <ul>
+            <li>Show card when child needs to wait</li>
+            <li>Use timer circles or visual timer alongside</li>
+            <li>Practice waiting for short periods first</li>
+            <li>Pair with "First/Then" for motivation</li>
+            <li>Praise patience and waiting skills</li>
+        </ul>
+    </div>
+    
+    <div class="wait-card">
+        <div class="wait-icon">⏳</div>
+        <div class="wait-text">WAIT</div>
+        <p style="font-size: 32px; color: #666; margin: 20px 0;">Please wait your turn</p>
+        
+        <div class="timer-box">
+            <p style="font-size: 24px; font-weight: bold; color: #573776;">Waiting Time:</p>
+            <div class="timer-circles">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <p style="font-size: 18px; color: #666;">(Cross off circles as time passes)</p>
+        </div>
+        
+        <p style="font-size: 28px; margin-top: 30px;">
+            <strong>While you wait, you can:</strong><br>
+            📱 Deep breaths<br>
+            📱 Count to 10<br>
+            📱 Squeeze hands
+        </p>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
+        <p>© 2024 Maudy - Supporting 2e Families | www.maudy.com</p>
+    </div>
+</body>
+</html>
+

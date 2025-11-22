@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Visual Schedule - Maudy Visual Support</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 20px; }
+            .no-print { display: none; }
+            @page { size: A4; margin: 15mm; }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        .print-btn {
+            background: #573776;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #573776;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .schedule {
+            border: 3px solid #573776;
+            border-radius: 10px;
+            padding: 20px;
+            background: #f0e6f6;
+        }
+        .time-slot {
+            display: grid;
+            grid-template-columns: 100px 1fr 60px;
+            gap: 15px;
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 5px solid #FFB6C1;
+            align-items: center;
+        }
+        .time {
+            font-weight: bold;
+            font-size: 18px;
+            color: #573776;
+        }
+        .activity {
+            font-size: 20px;
+            min-height: 60px;
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .checkbox {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #573776;
+            border-radius: 5px;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #573776;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print to PDF</button>
+    
+    <h1>My Daily Schedule</h1>
+    <p style="text-align: center; color: #666; font-size: 18px;">Name: ___________________ Date: ___________________</p>
+    
+    <div class="instructions no-print">
+        <h3>How to Use:</h3>
+        <ol>
+            <li>Fill in your child's specific activities for each time slot</li>
+            <li>Print and laminate for repeated use</li>
+            <li>Add picture symbols next to each activity</li>
+            <li>Check off activities as completed throughout the day</li>
+            <li>Review schedule in morning and before transitions</li>
+        </ol>
+    </div>
+    
+    <div class="schedule">
+        <div class="time-slot">
+            <div class="time">7:00 AM</div>
+            <div class="activity">Wake Up & Get Dressed</div>
+            <div class="checkbox"></div>
+        </div>
+        
+        <div class="time-slot">
+            <div class="time">7:30 AM</div>
+            <div class="activity">Breakfast</div>
+            <div class="checkbox"></div>
+        </div>
+        
+        <div class="time-slot">
+            <div class="time">8:00 AM</div>
+            <div class="activity">Morning Routine (brush teeth, backpack)</div>
+            <div class="checkbox"></div>
+        </div>
+        
+        <div class="time-slot">
+            <div class="time">8:30 AM</div>
+            <div class="activity">Leave for School / School Time</div>
+            <div class="checkbox"></div>
+        </div>
+        
+        <div class="time-slot">
+            <div class="time">3:00 PM</div>
+            <div class="activity">After School Snack & Decompress</div>
+            <div class="checkbox"></div>
+        </div>
+        
+        <div class="time-slot">
+            <div class="time">4:00 PM</div>
+            <div class="activity">Homework / Quiet Time</div>
+            <div class="checkbox"></div>
+        </div>
+        
+        <div class="time-slot">
+            <div class="time">5:00 PM</div>
+            <div class="activity">Free Play / Activities</div>
+            <div class="checkbox"></div>
+        </div>
+        
+        <div class="time-slot">
+            <div class="time">6:00 PM</div>
+            <div class="activity">Dinner</div>
+            <div class="checkbox"></div>
+        </div>
+        
+        <div class="time-slot">
+            <div class="time">7:00 PM</div>
+            <div class="activity">Bath Time / Screen Time</div>
+            <div class="checkbox"></div>
+        </div>
+        
+        <div class="time-slot">
+            <div class="time">8:00 PM</div>
+            <div class="activity">Bedtime Routine / Story</div>
+            <div class="checkbox"></div>
+        </div>
+        
+        <div class="time-slot">
+            <div class="time">8:30 PM</div>
+            <div class="activity">Lights Out / Sleep</div>
+            <div class="checkbox"></div>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
+        <p>© 2024 Maudy - Supporting 2e Families | www.maudy.com</p>
+    </div>
+</body>
+</html>
+

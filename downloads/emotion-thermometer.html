@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Thermometer - Maudy Visual Support</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 20px; }
+            .no-print { display: none; }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        .print-btn {
+            background: #573776;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #573776;
+            text-align: center;
+        }
+        .thermometer {
+            width: 200px;
+            margin: 30px auto;
+            border: 5px solid #333;
+            border-radius: 100px;
+            padding: 10px;
+            background: white;
+        }
+        .level {
+            padding: 30px;
+            margin: 5px 0;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            border: 3px solid #333;
+        }
+        .level-5 { background: #8B0000; }
+        .level-4 { background: #DC143C; }
+        .level-3 { background: #FF8C00; }
+        .level-2 { background: #FFD700; }
+        .level-1 { background: #32CD32; }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #573776;
+            margin: 20px 0;
+        }
+        .description-box {
+            background: #f0e6f6;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .description-box h3 {
+            color: #573776;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print to PDF</button>
+    
+    <h1>My Emotion Thermometer</h1>
+    <p style="text-align: center; font-size: 18px; color: #666;">How big are your feelings right now?</p>
+    
+    <div class="instructions no-print">
+        <h3>How to Use:</h3>
+        <ul>
+            <li>Use to help child gauge emotional intensity</li>
+            <li>Ask "What number are you at?"</li>
+            <li>Use as early warning system before meltdowns</li>
+            <li>Practice identifying levels during calm times</li>
+        </ul>
+    </div>
+    
+    <div class="thermometer">
+        <div class="level level-5">
+            5<br>😡
+        </div>
+        <div class="level level-4">
+            4<br>😤
+        </div>
+        <div class="level level-3">
+            3<br>😟
+        </div>
+        <div class="level level-2">
+            2<br>😐
+        </div>
+        <div class="level level-1">
+            1<br>😊
+        </div>
+    </div>
+    
+    <div class="description-box">
+        <h3>5 - Explosion 💥</h3>
+        <p>Out of control, may yell, cry, hit. Need help NOW!</p>
+        
+        <h3>4 - Really Upset 😤</h3>
+        <p>Very angry or anxious. Hard to think clearly. Need break!</p>
+        
+        <h3>3 - Getting Upset 😟</h3>
+        <p>Starting to feel frustrated. Time for calming strategies.</p>
+        
+        <h3>2 - A Little Bothered 😐</h3>
+        <p>Something is bugging me but I can handle it.</p>
+        
+        <h3>1 - Calm & Happy 😊</h3>
+        <p>Feeling good! Ready to learn and play.</p>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
+        <p>© 2024 Maudy - Supporting 2e Families | www.maudy.com</p>
+    </div>
+</body>
+</html>
+

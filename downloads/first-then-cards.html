@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First/Then Cards - Maudy Visual Support</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 20px; }
+            .no-print { display: none; }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        .print-btn {
+            background: #573776;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .card-set {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f0e6f6;
+            border-radius: 10px;
+        }
+        .card {
+            background: white;
+            border: 4px solid #573776;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            width: 300px;
+        }
+        .card h2 {
+            color: #573776;
+            font-size: 42px;
+            margin: 0 0 20px 0;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .icon-box {
+            width: 180px;
+            height: 180px;
+            border: 3px dashed #FFB6C1;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            color: #FFB6C1;
+            margin: 20px auto;
+        }
+        .arrow {
+            font-size: 60px;
+            color: #573776;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #573776;
+            margin: 20px 0;
+        }
+        h1 {
+            color: #573776;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print to PDF</button>
+    
+    <h1>FIRST / THEN Cards</h1>
+    
+    <div class="instructions no-print">
+        <h3>How to Use:</h3>
+        <ol>
+            <li>Print this page and laminate</li>
+            <li>Add pictures or words for specific activities</li>
+            <li>Show: "FIRST [less preferred task], THEN [preferred activity]"</li>
+            <li>Example: "FIRST homework, THEN iPad time"</li>
+            <li>Helps motivate task completion and reduce resistance</li>
+        </ol>
+        <p><strong>Tip:</strong> Make sure the "THEN" activity is something highly motivating!</p>
+    </div>
+    
+    <div class="card-set">
+        <div class="card">
+            <h2>FIRST</h2>
+            <div class="icon-box">1️⃣</div>
+            <p style="font-size: 20px; color: #666; margin: 10px 0 0 0;">Complete this task</p>
+        </div>
+        
+        <div class="arrow">➜</div>
+        
+        <div class="card">
+            <h2>THEN</h2>
+            <div class="icon-box">⭐</div>
+            <p style="font-size: 20px; color: #666; margin: 10px 0 0 0;">Get this reward</p>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
+        <p>© 2024 Maudy - Supporting 2e Families | www.maudy.com</p>
+    </div>
+</body>
+</html>
+

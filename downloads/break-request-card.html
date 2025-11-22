@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break Request Card - Maudy Visual Support</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 20px; }
+            .no-print { display: none; }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        .print-btn {
+            background: #573776;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #573776;
+            text-align: center;
+        }
+        .break-card {
+            border: 6px solid #32CD32;
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+            background: linear-gradient(135deg, #E6FFE6 0%, #F0FFE6 100%);
+        }
+        .break-icon {
+            font-size: 120px;
+            margin: 20px 0;
+        }
+        .break-text {
+            font-size: 70px;
+            font-weight: bold;
+            color: #32CD32;
+            margin: 20px 0;
+        }
+        .subtext {
+            font-size: 32px;
+            color: #666;
+            margin: 20px 0;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #573776;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print to PDF</button>
+    
+    <h1>Break Request Card</h1>
+    
+    <div class="instructions no-print">
+        <h3>How to Use:</h3>
+        <ul>
+            <li>Print and laminate this card</li>
+            <li>Child can hand card to teacher/adult when feeling overwhelmed</li>
+            <li>Teaches non-verbal communication of needs</li>
+            <li>Prevents escalation by allowing early break</li>
+            <li>Return card when ready to come back</li>
+        </ul>
+    </div>
+    
+    <div class="break-card">
+        <div class="break-icon">🛑</div>
+        <div class="break-text">I NEED A BREAK</div>
+        <div class="subtext">Please excuse me</div>
+        
+        <div style="margin-top: 40px; padding-top: 40px; border-top: 3px dashed #32CD32;">
+            <p style="font-size: 24px; color: #666; line-height: 1.6;">
+                I'm feeling overwhelmed and need:<br><br>
+                ✓ A quiet space<br>
+                ✓ Time to calm down<br>
+                ✓ A few minutes alone<br><br>
+                <strong>I will return when I'm ready</strong>
+            </p>
+        </div>
+    </div>
+    
+    <div style="background: #fffacd; padding: 20px; border-radius: 10px; margin: 30px 0; border: 2px solid #FFD700;">
+        <p style="font-size: 16px; text-align: center; margin: 0;">
+            <strong>💡 Tip for Teachers:</strong> Honor this card immediately. A 5-minute break can prevent a 50-minute meltdown!
+        </p>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
+        <p>© 2024 Maudy - Supporting 2e Families | www.maudy.com</p>
+    </div>
+</body>
+</html>
+

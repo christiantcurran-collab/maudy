@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feelings Chart - Maudy Visual Support</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 20px; }
+            .no-print { display: none; }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        .print-btn {
+            background: #573776;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #573776;
+            text-align: center;
+        }
+        .feelings-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .feeling-card {
+            background: white;
+            border: 4px solid #573776;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .feeling-card:hover {
+            transform: scale(1.05);
+        }
+        .emoji {
+            font-size: 80px;
+            margin: 10px 0;
+        }
+        .feeling-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #573776;
+            margin: 10px 0;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #573776;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print to PDF</button>
+    
+    <h1>How Are You Feeling Today?</h1>
+    <p style="text-align: center; font-size: 20px; color: #666;">Point to the face that shows how you feel</p>
+    
+    <div class="instructions no-print">
+        <h3>How to Use:</h3>
+        <ul>
+            <li>Print and laminate this chart</li>
+            <li>Display where child can easily see it</li>
+            <li>Ask "How are you feeling?" and have them point</li>
+            <li>Helps children identify and communicate emotions</li>
+            <li>Use throughout the day to build emotional vocabulary</li>
+        </ul>
+    </div>
+    
+    <div class="feelings-grid">
+        <div class="feeling-card" style="border-color: #FFD700;">
+            <div class="emoji">😊</div>
+            <div class="feeling-name" style="color: #FFD700;">HAPPY</div>
+        </div>
+        
+        <div class="feeling-card" style="border-color: #4169E1;">
+            <div class="emoji">😢</div>
+            <div class="feeling-name" style="color: #4169E1;">SAD</div>
+        </div>
+        
+        <div class="feeling-card" style="border-color: #DC143C;">
+            <div class="emoji">😠</div>
+            <div class="feeling-name" style="color: #DC143C;">ANGRY</div>
+        </div>
+        
+        <div class="feeling-card" style="border-color: #FF8C00;">
+            <div class="emoji">😰</div>
+            <div class="feeling-name" style="color: #FF8C00;">WORRIED</div>
+        </div>
+        
+        <div class="feeling-card" style="border-color: #32CD32;">
+            <div class="emoji">😌</div>
+            <div class="feeling-name" style="color: #32CD32;">CALM</div>
+        </div>
+        
+        <div class="feeling-card" style="border-color: #FF1493;">
+            <div class="emoji">😟</div>
+            <div class="feeling-name" style="color: #FF1493;">FRUSTRATED</div>
+        </div>
+        
+        <div class="feeling-card" style="border-color: #9370DB;">
+            <div class="emoji">😴</div>
+            <div class="feeling-name" style="color: #9370DB;">TIRED</div>
+        </div>
+        
+        <div class="feeling-card" style="border-color: #FFB6C1;">
+            <div class="emoji">😨</div>
+            <div class="feeling-name" style="color: #FFB6C1;">SCARED</div>
+        </div>
+        
+        <div class="feeling-card" style="border-color: #FF6347;">
+            <div class="emoji">🤯</div>
+            <div class="feeling-name" style="color: #FF6347;">OVERWHELMED</div>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
+        <p>© 2024 Maudy - Supporting 2e Families | www.maudy.com</p>
+    </div>
+</body>
+</html>
+
