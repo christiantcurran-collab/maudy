@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maudy - Supporting parents of twice exceptional children with resources, tools, and community. Free downloadable social stories, sensory profiles, and expert guidance.">
+    <meta name="keywords" content="twice exceptional, 2e children, gifted learning disabilities, neurodivergent, sensory profile, social stories, visual schedules, parenting resources">
+    <meta name="author" content="Maudy">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.maudy.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.maudy.com/">
+    <meta property="og:title" content="Maudy | Supporting Parents of Twice Exceptional Children">
+    <meta property="og:description" content="Free resources, tools, and support for parents of twice exceptional (2e) children. Social stories, sensory profiles, and expert guidance.">
+    <meta property="og:image" content="https://www.maudy.com/maudy%20logo.PNG">
+    <meta property="og:site_name" content="Maudy">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.maudy.com/">
+    <meta name="twitter:title" content="Maudy | Supporting Parents of Twice Exceptional Children">
+    <meta name="twitter:description" content="Free resources, tools, and support for parents of twice exceptional (2e) children.">
+    <meta name="twitter:image" content="https://www.maudy.com/maudy%20logo.PNG">
+    
+    <title>Maudy | Supporting Parents of Twice Exceptional Children</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Force full width and reset everything */
+        body {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
+        /* Override container widths for full-width layout */
+        .container.home-container {
+            max-width: none !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: transparent !important;
+        }
+        
+        /* Center the resources section with much wider layout */
+        .home-tools-grid {
+            max-width: 1400px !important;
+            width: 90% !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            margin-top: 2rem !important;
+            margin-bottom: 2rem !important;
+            padding: 0 !important;
+            display: block !important;
+        }
+        
+        .home-section {
+            width: 100% !important;
+            margin: 0 auto !important;
+            background: white;
+            padding: 2.5rem 3rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: block !important;
+        }
+        
+        .home-section .compact-tool-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0 0 0;
+        }
+        
+        .home-section .compact-tool-list li {
+            margin: 0;
+        }
+        
+        .home-section .compact-tool-list li a {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.2s;
+            border-left: 4px solid var(--primary-color);
+            height: 100%;
+            min-height: 70px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .home-section .compact-tool-list li a:hover {
+            background: var(--primary-light);
+            transform: translateX(4px);
+        }
+        
+        .home-section .compact-tool-list li a i {
+            margin-right: 1rem;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        /* Center the blog section to match calculator width */
+        .latest-blog-section {
+            max-width: 1400px !important;
+            width: 90% !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            margin-top: 2rem !important;
+            margin-bottom: 2rem !important;
+        }
+        
+        @media (max-width: 1400px) {
+            .home-tools-grid,
+            .latest-blog-section {
+                width: 85%;
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            .home-tools-grid,
+            .latest-blog-section {
+                width: 90%;
+            }
+            
+            .home-section {
+                padding: 2rem 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .home-container {
+                max-width: 100% !important;
+            }
+            
+            .home-tools-grid {
+                width: 100%;
+                margin: 1rem auto;
+                padding: 0 1rem;
+            }
+            
+            .home-section {
+                padding: 1.5rem 1rem;
+            }
+            
+            .home-section .compact-tool-list {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+            
+            .home-section .compact-tool-list li a {
+                font-size: 1rem;
+                padding: 1rem 1.25rem;
+                min-height: 60px;
+            }
+        }
+    </style>
+    
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Maudy",
+      "url": "https://www.maudy.com",
+      "description": "Supporting parents of twice exceptional children with free resources, tools, and guidance"
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <div class="maudy-logo">
+                    <img src="maudy logo.PNG" alt="Maudy Logo" class="logo-image">
+                    <div class="logo-text-container">
+                        <span class="logo-text">maudy</span>
+                        <span class="logo-tagline">Supporting 2e families</span>
+                    </div>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">
+                        Resources <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="social-stories.html">Social Stories</a></li>
+                        <li><a href="visual-supports.html">Visual Supports</a></li>
+                        <li><a href="sensory-profile.html">Sensory Profile Builder</a></li>
+                        <li><a href="recommended-products.html">Recommended Products</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="blogs.html" class="nav-link">Blog</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="emailSignupBtn">Weekly Newsletter</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container home-container">
+        <!-- Main Tools Grid -->
+        <div class="home-tools-grid">
+            <!-- Resources Section -->
+            <div class="home-section">
+                <h2 class="section-title" style="text-align: center;"><i class="fas fa-lightbulb"></i> Free Resources & Tools</h2>
+                <ul class="compact-tool-list">
+                    <li><a href="social-stories.html"><i class="fas fa-book-open"></i> Social Stories</a></li>
+                    <li><a href="visual-supports.html"><i class="fas fa-images"></i> Visual Supports</a></li>
+                    <li><a href="sensory-profile.html"><i class="fas fa-clipboard-check"></i> Sensory Profile Builder</a></li>
+                    <li><a href="recommended-products.html"><i class="fas fa-star"></i> Recommended Products</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Latest Blog Post -->
+        <div class="latest-blog-section">
+            <h2 class="section-title"><i class="fas fa-newspaper"></i> Latest From Our Blog</h2>
+            <article class="featured-blog-card">
+                <a href="blog-understanding-2e.html" class="featured-blog-link">
+                    <div class="featured-blog-image">
+                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop" alt="Understanding Twice Exceptional Children">
+                    </div>
+                    <div class="featured-blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> 22 November 2025</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3>Understanding Twice Exceptional Children: A Parent's Guide</h3>
+                        <p>Learn what it means to be twice exceptional (2e) and how to best support your child's unique combination of gifts and challenges. Practical strategies for home and school.</p>
+                        <span class="read-more-btn">Read Article <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </article>
+            
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="blogs.html" class="view-all-blogs-link">
+                    View All Articles <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 0.5rem;">
+                    © 2024 Maudy. All rights reserved.
+                </p>
+                <p style="font-size: 0.75rem; opacity: 0.6; line-height: 1.5; margin-top: 0.5rem;">
+                    The information provided on this site is for educational purposes only and should not replace professional medical, educational, or psychological advice. Always consult with qualified professionals regarding your child's specific needs.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="navigation.js"></script>
+</body>
+</html>
+
