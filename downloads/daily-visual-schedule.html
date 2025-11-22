@@ -11,6 +11,7 @@
             @page { size: A4; margin: 15mm; }
             .activity { border: 1px solid #ddd !important; }
             .time { border: 1px solid #ddd !important; }
+            .delete-btn { display: none !important; }
         }
         body {
             font-family: Arial, sans-serif;
@@ -46,7 +47,7 @@
         }
         .time-slot {
             display: grid;
-            grid-template-columns: 100px 1fr 60px;
+            grid-template-columns: 100px 1fr 60px 40px;
             gap: 15px;
             background: white;
             padding: 15px;
@@ -90,6 +91,22 @@
             border: 3px solid #573776;
             border-radius: 5px;
         }
+        .delete-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .delete-btn:hover {
+            background: #c82333;
+        }
         .instructions {
             background: #f8f9fa;
             padding: 20px;
@@ -110,6 +127,7 @@
         <ol>
             <li>Click on any time or activity to edit it before printing</li>
             <li>Use "Add Time Slot" button to add more entries</li>
+            <li>Use "X" button to delete unwanted time slots</li>
             <li>Customize times and activities to match your family's routine</li>
             <li>Click "Print to PDF" when ready</li>
             <li>Review the schedule with your child at the start of the day</li>
@@ -122,66 +140,77 @@
             <input type="text" class="time" value="7:00 AM">
             <input type="text" class="activity" value="Wake Up & Get Dressed">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteTimeSlot(this)">×</button>
         </div>
         
         <div class="time-slot">
             <input type="text" class="time" value="7:30 AM">
             <input type="text" class="activity" value="Breakfast">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteTimeSlot(this)">×</button>
         </div>
         
         <div class="time-slot">
             <input type="text" class="time" value="8:00 AM">
             <input type="text" class="activity" value="Morning Routine (brush teeth, backpack)">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteTimeSlot(this)">×</button>
         </div>
         
         <div class="time-slot">
             <input type="text" class="time" value="8:30 AM">
             <input type="text" class="activity" value="Leave for School / School Time">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteTimeSlot(this)">×</button>
         </div>
         
         <div class="time-slot">
             <input type="text" class="time" value="3:00 PM">
             <input type="text" class="activity" value="After School Snack & Decompress">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteTimeSlot(this)">×</button>
         </div>
         
         <div class="time-slot">
             <input type="text" class="time" value="4:00 PM">
             <input type="text" class="activity" value="Homework / Quiet Time">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteTimeSlot(this)">×</button>
         </div>
         
         <div class="time-slot">
             <input type="text" class="time" value="5:00 PM">
             <input type="text" class="activity" value="Free Play / Activities">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteTimeSlot(this)">×</button>
         </div>
         
         <div class="time-slot">
             <input type="text" class="time" value="6:00 PM">
             <input type="text" class="activity" value="Dinner">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteTimeSlot(this)">×</button>
         </div>
         
         <div class="time-slot">
             <input type="text" class="time" value="7:00 PM">
             <input type="text" class="activity" value="Bath Time / Screen Time">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteTimeSlot(this)">×</button>
         </div>
         
         <div class="time-slot">
             <input type="text" class="time" value="8:00 PM">
             <input type="text" class="activity" value="Bedtime Routine / Story">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteTimeSlot(this)">×</button>
         </div>
         
         <div class="time-slot">
             <input type="text" class="time" value="8:30 PM">
             <input type="text" class="activity" value="Lights Out / Sleep">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteTimeSlot(this)">×</button>
         </div>
     </div>
     
@@ -194,8 +223,14 @@
                 <input type="text" class="time" value="9:00 AM">
                 <input type="text" class="activity" value="New Activity">
                 <div class="checkbox"></div>
+                <button class="delete-btn no-print" onclick="deleteTimeSlot(this)">×</button>
             `;
             schedule.appendChild(newSlot);
+        }
+        
+        function deleteTimeSlot(button) {
+            const timeSlot = button.parentElement;
+            timeSlot.remove();
         }
     </script>
     

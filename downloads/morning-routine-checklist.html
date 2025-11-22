@@ -10,6 +10,7 @@
             .no-print { display: none; }
             @page { size: A4; margin: 15mm; }
             .step-content { border: 1px solid #ddd !important; }
+            .delete-btn { display: none !important; }
         }
         body {
             font-family: Arial, sans-serif;
@@ -88,6 +89,24 @@
             margin-left: 20px;
             flex-shrink: 0;
         }
+        .delete-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            flex-shrink: 0;
+        }
+        .delete-btn:hover {
+            background: #c82333;
+        }
         .instructions {
             background: #f8f9fa;
             padding: 20px;
@@ -108,6 +127,7 @@
         <ul>
             <li>Click on any step to edit it before printing</li>
             <li>Use "Add Step" button to add more steps</li>
+            <li>Use "X" button to delete unwanted steps</li>
             <li>Print and laminate this checklist</li>
             <li>Use a dry-erase marker to check off steps each morning</li>
             <li>Hang in bathroom or bedroom where easily visible</li>
@@ -119,54 +139,63 @@
             <div class="step-number">1</div>
             <input type="text" class="step-content" value="Wake up and get out of bed">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteStep(this)">×</button>
         </div>
         
         <div class="step">
             <div class="step-number">2</div>
             <input type="text" class="step-content" value="Use the bathroom">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteStep(this)">×</button>
         </div>
         
         <div class="step">
             <div class="step-number">3</div>
             <input type="text" class="step-content" value="Brush teeth">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteStep(this)">×</button>
         </div>
         
         <div class="step">
             <div class="step-number">4</div>
             <input type="text" class="step-content" value="Wash face and hands">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteStep(this)">×</button>
         </div>
         
         <div class="step">
             <div class="step-number">5</div>
             <input type="text" class="step-content" value="Get dressed">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteStep(this)">×</button>
         </div>
         
         <div class="step">
             <div class="step-number">6</div>
             <input type="text" class="step-content" value="Brush or comb hair">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteStep(this)">×</button>
         </div>
         
         <div class="step">
             <div class="step-number">7</div>
             <input type="text" class="step-content" value="Eat breakfast">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteStep(this)">×</button>
         </div>
         
         <div class="step">
             <div class="step-number">8</div>
             <input type="text" class="step-content" value="Put on shoes and coat">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteStep(this)">×</button>
         </div>
         
         <div class="step">
             <div class="step-number">9</div>
             <input type="text" class="step-content" value="Pack backpack">
             <div class="checkbox"></div>
+            <button class="delete-btn no-print" onclick="deleteStep(this)">×</button>
         </div>
         
         <div class="step">
@@ -189,6 +218,7 @@
                 <div class="step-number">${newStepNumber}</div>
                 <input type="text" class="step-content" value="New step">
                 <div class="checkbox"></div>
+                <button class="delete-btn no-print" onclick="deleteStep(this)">×</button>
             `;
             
             // Insert before the final "Ready for the day!" step
@@ -196,6 +226,15 @@
             
             // Update all step numbers
             updateStepNumbers();
+        }
+        
+        function deleteStep(button) {
+            const step = button.parentElement;
+            // Don't allow deleting the final celebration step
+            if (step.querySelector('.step-number').textContent !== '✓') {
+                step.remove();
+                updateStepNumbers();
+            }
         }
         
         function updateStepNumbers() {
