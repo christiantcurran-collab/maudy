@@ -8,6 +8,7 @@
         @media print {
             body { margin: 0; padding: 20px; }
             .no-print { display: none; }
+            @page { size: A4; margin: 15mm; }
         }
         body {
             font-family: Arial, sans-serif;
@@ -43,25 +44,18 @@
             padding: 40px;
             text-align: center;
             width: 300px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         .card h2 {
             color: #573776;
-            font-size: 42px;
-            margin: 0 0 20px 0;
+            font-size: 64px;
+            margin: 0;
             text-transform: uppercase;
             font-weight: bold;
-        }
-        .icon-box {
-            width: 180px;
-            height: 180px;
-            border: 3px dashed #FFB6C1;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 100px;
-            color: #FFB6C1;
-            margin: 20px auto;
         }
         .arrow {
             font-size: 60px;
@@ -99,21 +93,17 @@
     <div class="card-set">
         <div class="card">
             <h2>FIRST</h2>
-            <div class="icon-box">1️⃣</div>
-            <p style="font-size: 20px; color: #666; margin: 10px 0 0 0;">Complete this task</p>
         </div>
         
         <div class="arrow">➜</div>
         
         <div class="card">
             <h2>THEN</h2>
-            <div class="icon-box">⭐</div>
-            <p style="font-size: 20px; color: #666; margin: 10px 0 0 0;">Get this reward</p>
         </div>
     </div>
     
     <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
-        <p>© 2024 Maudy - Supporting 2e Families | www.maudy.com</p>
+        <p>maudy.co</p>
     </div>
 </body>
 </html>

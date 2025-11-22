@@ -9,6 +9,7 @@
             body { margin: 0; padding: 20px; }
             .no-print { display: none; }
             @page { size: A4; margin: 15mm; }
+            .activity { border: 1px solid #ddd !important; }
         }
         body {
             font-family: Arial, sans-serif;
@@ -55,13 +56,18 @@
             color: #573776;
         }
         .activity {
-            font-size: 20px;
-            min-height: 60px;
+            font-size: 18px;
+            min-height: 50px;
             border: 2px dashed #ccc;
             border-radius: 5px;
             padding: 10px;
-            display: flex;
-            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .activity:focus {
+            outline: 2px solid #573776;
+            border-color: #573776;
+            border-style: solid;
         }
         .checkbox {
             width: 40px;
@@ -86,84 +92,84 @@
     <div class="instructions no-print">
         <h3>How to Use:</h3>
         <ol>
-            <li>Fill in your child's specific activities for each time slot</li>
-            <li>Print and laminate for repeated use</li>
-            <li>Add picture symbols next to each activity</li>
-            <li>Check off activities as completed throughout the day</li>
-            <li>Review schedule in morning and before transitions</li>
+            <li>Click on any activity to edit it before printing</li>
+            <li>Customize times and activities to match your family's routine</li>
+            <li>Click "Print to PDF" when ready</li>
+            <li>Review the schedule with your child at the start of the day</li>
+            <li>Check off each activity as completed</li>
         </ol>
     </div>
     
     <div class="schedule">
         <div class="time-slot">
             <div class="time">7:00 AM</div>
-            <div class="activity">Wake Up & Get Dressed</div>
+            <input type="text" class="activity" value="Wake Up & Get Dressed">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
             <div class="time">7:30 AM</div>
-            <div class="activity">Breakfast</div>
+            <input type="text" class="activity" value="Breakfast">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
             <div class="time">8:00 AM</div>
-            <div class="activity">Morning Routine (brush teeth, backpack)</div>
+            <input type="text" class="activity" value="Morning Routine (brush teeth, backpack)">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
             <div class="time">8:30 AM</div>
-            <div class="activity">Leave for School / School Time</div>
+            <input type="text" class="activity" value="Leave for School / School Time">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
             <div class="time">3:00 PM</div>
-            <div class="activity">After School Snack & Decompress</div>
+            <input type="text" class="activity" value="After School Snack & Decompress">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
             <div class="time">4:00 PM</div>
-            <div class="activity">Homework / Quiet Time</div>
+            <input type="text" class="activity" value="Homework / Quiet Time">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
             <div class="time">5:00 PM</div>
-            <div class="activity">Free Play / Activities</div>
+            <input type="text" class="activity" value="Free Play / Activities">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
             <div class="time">6:00 PM</div>
-            <div class="activity">Dinner</div>
+            <input type="text" class="activity" value="Dinner">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
             <div class="time">7:00 PM</div>
-            <div class="activity">Bath Time / Screen Time</div>
+            <input type="text" class="activity" value="Bath Time / Screen Time">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
             <div class="time">8:00 PM</div>
-            <div class="activity">Bedtime Routine / Story</div>
+            <input type="text" class="activity" value="Bedtime Routine / Story">
             <div class="checkbox"></div>
         </div>
         
         <div class="time-slot">
             <div class="time">8:30 PM</div>
-            <div class="activity">Lights Out / Sleep</div>
+            <input type="text" class="activity" value="Lights Out / Sleep">
             <div class="checkbox"></div>
         </div>
     </div>
     
     <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
-        <p>© 2024 Maudy - Supporting 2e Families | www.maudy.com</p>
+        <p>maudy.co</p>
     </div>
 </body>
 </html>
